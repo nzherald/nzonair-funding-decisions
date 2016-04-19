@@ -34,4 +34,4 @@ build/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
-nz_on_air_funding_decisions.csv
+# nz_on_air_funding_decisions.csv

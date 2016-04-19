@@ -31,23 +31,6 @@ class NZOnAirScraper
 
   private
 
-  def check_school_assessment(school)
-    visit school[:link]
-    assessment = begin
-                   find('.main-finding-block .highlight').text
-                 rescue Capybara::ElementNotFound
-                   nil
-                 end
-
-    report_download_link = begin
-                             find('a.download-report-button')['href']
-                           rescue Capybara::ElementNotFound
-                             nil
-                           end
-
-    [school[:name], school[:link], assessment, 'http://ero.govt.nz' + report_download_link]
-  end
-
   def get_list
     results = []
 
